@@ -6,6 +6,9 @@ import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2
 
 import {SeedApp} from './app/seed-app';
 
+import 'rxjs/Rx';
+
+
 bootstrap(SeedApp, [
   HTTP_PROVIDERS,
   ROUTER_PROVIDERS,
