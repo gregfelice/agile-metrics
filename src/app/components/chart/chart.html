@@ -1,15 +1,15 @@
 
 <h3>Chart Component</h3>
+
 <p>This is the chart component! w00t!</p>
 
-{{ foo }}
-
-<br>
-
 <ul>
-	 <li *ngFor="#metric of metrics">
-      {{ metric.name }}
-  </li>
+	<li *ngFor="#metric of metrics">
+		{{ metric.teamName }} |
+		{{ metric.standardDeployments }} |
+		{{ metric.normalDeployments }} |
+		{{ metric.emergencyDeployments }}
+	</li>
 </ul>
 
 <br>

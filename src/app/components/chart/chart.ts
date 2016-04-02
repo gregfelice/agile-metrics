@@ -1,26 +1,32 @@
 
 import {Component} from 'angular2/core';
-import {Http} from 'angular2/http';
-import {AgileMetrics} from '../../services/agilemetrics';
+
+import {AgileMetric} from '../../services/agile_metric';
+import {AgileMetricsService} from '../../services/agile_metrics_service';
 
 @Component({
     selector: 'chart',
     templateUrl: 'app/components/chart/chart.html',
     styleUrls: ['app/components/chart/chart.css'],
-    providers: [],
+    providers: [AgileMetricsService],
     directives: [],
     pipes: []
 })
 export class Chart {
 
-    public metrics;
-    public foo = "FOO VALUE";
+    errorMessage: string;
+    metrics: AgileMetric[];
 
-    constructor(http: Http) {
-        var backend = new AgileMetrics(http);
-        this.metrics = backend.fetchMetrics();
+    constructor(private metricsService: AgileMetricsService) { }
+
+    ngOnInit() { this.getMetrics(); }
+
+    getMetrics() {
+        this.metricsService.fetchMetrics()
+            .subscribe(
+            metrics => this.metrics = metrics,
+            error => this.errorMessage = <any>error);
+        //console.log(this.metrics);
     }
 
-    ngOnInit() {
-    }
 }

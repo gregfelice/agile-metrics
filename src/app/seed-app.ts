@@ -3,7 +3,6 @@ import {Router, RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 import {Home} from './components/home/home';
 import {About} from './components/about/about';
-
 import {Chart} from './components/chart/chart';
 
 import {RepoBrowser} from './components/repo-browser/repo-browser';
