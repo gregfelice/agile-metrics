@@ -1,16 +1,13 @@
 
 ## Agile Metrics App
-
 A simple app to get some graphs up and running around measurements we collect from a json file.
 
 ### Front end
-charts: http://valor-software.com/ng2-charts/ (buggy)
-incorporating js libraries: https://www.thepolyglotdeveloper.com/2016/01/include-external-javascript-libraries-in-an-angular-2-typescript-project/
+* [ng2 charts (buggy)](http://valor-software.com/ng2-charts/)
+* [incorporating js libraries] (https://www.thepolyglotdeveloper.com/2016/01/include-external-javascript-libraries-in-an-angular-2-typescript-project/)
 
 ### Back end
 node, mongodb, mongoose, restify
-see https://github.com/Microsoft/TypeScriptSamples/tree/master/imageboard
-try to avoid express for first round.
 
 ### Other reference
 * [Typescript and Webpack](http://www.jbrantly.com/typescript-and-webpack/)
